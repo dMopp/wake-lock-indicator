@@ -1,0 +1,12 @@
+{
+  "extDescription": { "message": "Zeigt, welche Tabs Wake-Locks halten oder Medien und WebRTC nutzen – die üblichen Gründe, warum ein PC nicht einschläft." },
+  "popupHeading": { "message": "Auffällige Tabs" },
+  "popupEmpty": { "message": "Gerade ist kein Tab auffällig." },
+  "popupNote": { "message": "Wake-Locks und WebRTC-Verbindungen von vor dem Laden der Erweiterung erscheinen erst nach einem Neuladen des Tabs. Andere browserinterne Ursachen werden nicht erkannt." },
+  "tagWakeLock": { "message": "Wake-Lock" },
+  "tagVideo": { "message": "Video" },
+  "tagAudio": { "message": "Audio" },
+  "tagWebRtc": { "message": "WebRTC" },
+  "tagSound": { "message": "Ton" },
+  "titleIdle": { "message": "Wake Lock Indicator: kein Tab auffällig" }
+}

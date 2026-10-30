@@ -1,0 +1,12 @@
+{
+  "extDescription": { "message": "Shows which tabs hold wake locks or use media and WebRTC, the usual reasons a PC won't sleep." },
+  "popupHeading": { "message": "Suspicious tabs" },
+  "popupEmpty": { "message": "No tab is suspicious right now." },
+  "popupNote": { "message": "Wake locks and WebRTC connections started before the extension loaded only show up after reloading the tab. Other browser-internal causes are not detected." },
+  "tagWakeLock": { "message": "Wake lock" },
+  "tagVideo": { "message": "Video" },
+  "tagAudio": { "message": "Audio" },
+  "tagWebRtc": { "message": "WebRTC" },
+  "tagSound": { "message": "Sound" },
+  "titleIdle": { "message": "Wake Lock Indicator: no suspicious tabs" }
+}

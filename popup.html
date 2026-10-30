@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --fg: #1b1b1b;
+        --muted: #666666;
+        --line: #dddddd;
+        --tag: #c62828;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1e1f22;
+          --fg: #ececec;
+          --muted: #a0a0a0;
+          --line: #3a3b3f;
+          --tag: #ef5350;
+        }
+      }
+      body {
+        width: 360px;
+        margin: 0;
+        padding: 12px;
+        background: var(--bg);
+        color: var(--fg);
+        font: 13px system-ui, sans-serif;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 14px;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      li {
+        padding: 8px 0;
+        border-top: 1px solid var(--line);
+      }
+      .title {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: inherit;
+        font: inherit;
+        font-weight: 600;
+        text-align: left;
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .title:hover {
+        text-decoration: underline;
+      }
+      .host,
+      .note {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .tags {
+        margin-top: 4px;
+      }
+      .tag {
+        display: inline-block;
+        margin-right: 4px;
+        padding: 1px 6px;
+        border: 1px solid var(--tag);
+        border-radius: 4px;
+        color: var(--tag);
+        font-size: 11px;
+      }
+      .note {
+        margin: 10px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading"></h1>
+    <ul id="list"></ul>
+    <p id="empty" class="note" hidden></p>
+    <p id="note" class="note"></p>
+    <script src="popup.js"></script>
+  </body>
+</html>
