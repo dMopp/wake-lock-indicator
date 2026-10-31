@@ -155,14 +155,28 @@ chrome.tabs.onRemoved.addListener((tabId) => {
 });
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
-  if (changeInfo.status === "loading") {
-    // Neues Dokument, der Punkt muss neu gesetzt werden.
-    update(async (tabs) => {
-      delete tabs[tabId];
-      const { [DOTS_KEY]: dotted = [] } = await chrome.storage.session.get(DOTS_KEY);
-      await chrome.storage.session.set({ [DOTS_KEY]: dotted.filter((id) => id !== tabId) });
-    });
-  } else if ("audible" in changeInfo || "title" in changeInfo) update(() => {});
+  if ("audible" in changeInfo || "title" in changeInfo) update(() => {});
+});
+
+// Neues Dokument, der Punkt muss neu gesetzt werden.
+function forgetDocument(tabId) {
+  update(async (tabs) => {
+    delete tabs[tabId];
+    const { [DOTS_KEY]: dotted = [] } = await chrome.storage.session.get(DOTS_KEY);
+    await chrome.storage.session.set({ [DOTS_KEY]: dotted.filter((id) => id !== tabId) });
+  });
+}
+
+// Nicht tabs.onUpdated: Dessen status "loading" kommt in Chromium auch bei pushState und
+// Hash-Änderungen, obwohl die Seite samt Verbindungen weiterläuft.
+chrome.webNavigation.onCommitted.addListener(({ tabId, frameId }) => {
+  if (frameId === 0) forgetDocument(tabId);
+});
+
+// Chromium löst bei Fehlerseiten kein onCommitted aus, Firefox schon. Bei einem Abbruch bleibt
+// die alte Seite dagegen offen.
+chrome.webNavigation.onErrorOccurred.addListener(({ tabId, frameId, error }) => {
+  if (!IS_FIREFOX && frameId === 0 && error !== "net::ERR_ABORTED") forgetDocument(tabId);
 });
 
 chrome.alarms.onAlarm.addListener(() => update(() => {}));

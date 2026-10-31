@@ -61,6 +61,7 @@ icon on the extension's card.
 | `storage` | Remember the current state while the background script sleeps (session only) |
 | `alarms` | Regularly remove outdated entries |
 | `favicon` (Chromium only) | Read the tab's current favicon to add the moon |
+| `webNavigation` | Reset a tab's state only when a new page loads, not when a running page just changes its address |
 
 ## Privacy
 

@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Wake Lock Indicator",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "__MSG_extDescription__",
   "default_locale": "en",
-  "permissions": ["tabs", "scripting", "storage", "alarms", "favicon"],
+  "permissions": ["tabs", "scripting", "storage", "alarms", "favicon", "webNavigation"],
   "host_permissions": ["<all_urls>"],
   "background": { "service_worker": "background.js" },
   "action": {
