@@ -65,8 +65,9 @@ icon on the extension's card.
 
 ## Privacy
 
-The extension collects nothing and sends nothing to anyone or to the developer. The state of your
-tabs stays in the browser's session storage and is gone when the browser closes. In Firefox it
+The extension sends nothing to the developer or to anyone else. It reads the titles and addresses of
+suspicious tabs only to show them in the popup and the toolbar tooltip, and it doesn't store them.
+The state of your tabs stays in the browser's session storage and is gone when the browser closes. In Firefox it
 requests the favicon of a marked tab from the address the browser reports for that tab, which is
 usually the website you are on.
 
