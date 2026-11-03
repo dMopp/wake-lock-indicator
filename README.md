@@ -33,7 +33,9 @@ To confirm a suspect, close the tab and check whether your desktop goes idle aga
 
 ### Firefox
 
-Firefox 142 or newer. Store link to follow.
+Firefox 142 or newer.
+
+https://addons.mozilla.org/de/firefox/addon/wake-lock-indicator/
 
 ### Chromium-based browsers (Brave, Chrome, Edge, Vivaldi …)
 
