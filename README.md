@@ -39,7 +39,7 @@ https://addons.mozilla.org/de/firefox/addon/wake-lock-indicator/
 
 ### Chromium-based browsers (Brave, Chrome, Edge, Vivaldi …)
 
-https://chromewebstore.google.com/detail/wake-lock-indicator
+https://chromewebstore.google.com/detail/hfhnnfmgepmijopmlmchnadopgokapgc?utm_source=item-share-cp
 
 ## Permissions
 
