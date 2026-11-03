@@ -39,19 +39,7 @@ https://addons.mozilla.org/de/firefox/addon/wake-lock-indicator/
 
 ### Chromium-based browsers (Brave, Chrome, Edge, Vivaldi …)
 
-There is no Chrome Web Store release, so you load it yourself:
-
-1. Download the `-chromium.zip` of the latest
-   [release](https://github.com/dMopp/wake-lock-indicator/releases) and unpack it to a folder you
-   keep. The browser loads the extension from there, so don't delete
-   the folder afterwards.
-2. Open the extensions page, for example `chrome://extensions` or `brave://extensions`.
-3. Enable **Developer mode**.
-4. Click **Load unpacked** and select the unpacked folder.
-5. Pin the icon to your toolbar.
-
-Updates don't arrive automatically. To update, replace the folder's contents and click the reload
-icon on the extension's card.
+https://chromewebstore.google.com/detail/wake-lock-indicator
 
 ## Permissions
 
